@@ -136,4 +136,4 @@ The SDK provides comprehensive coverage of the BlockFrost API, including:
 
 ## License
 
-This project is open source. Please check the license file for more details.
+This project is open source. Liscense will be added soon
