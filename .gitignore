@@ -1,0 +1,57 @@
+# Ignore everything by default
+*
+
+# Allow directories
+!*/
+
+# Allow specific files and directories
+!src/
+!include/
+!tests/
+!readme.md
+!CMakeLists.txt
+
+# Ignore build artifacts even in allowed directories
+**/build/
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/.vs/
+**/CMakeCache.txt
+**/CMakeFiles/
+**/cmake_install.cmake
+**/Makefile
+**/*.vcxproj
+**/*.vcxproj.filters
+**/*.vcxproj.user
+**/*.sln
+**/*.exe
+**/*.dll
+**/*.lib
+**/*.obj
+**/*.pdb
+**/*.ilk
+**/*.exp
+**/*.o
+**/*.a
+**/*.so
+**/*.dylib
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp 
