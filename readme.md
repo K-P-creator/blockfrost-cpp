@@ -5,6 +5,7 @@
 
 The goal of this project is to create a C++ SDK for BlockFrost/Cardano.
 I will use libcpr for HTML requests to blockfrost. I will use nlohmann/json for JSON parsing
+When you use the tests or the demo you will need to add your API key to src/main.cpp and/or tests/test_constants.h
 
 ### Dependencies
 
@@ -45,6 +46,7 @@ This project is built with MSVC (Microsoft Visual Studio Compiler). Follow these
    ```
 
 5. **Build the main project and all tests**
+  Remember to add your API key before building!
    ```cmd
    cmake --build build --config Debug --target run_all_tests
    ```
