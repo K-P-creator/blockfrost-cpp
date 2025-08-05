@@ -59,15 +59,34 @@ This project is built with MSVC (Microsoft Visual Studio Compiler). Follow these
 
 ## Running Tests
 
-### Method 1: Direct Execution
+### Navigate to directory
 
 ```cmd
 cd build/bin/tests/Debug
+```
+
+### Run Tests
+
+```cmd
 test_blockfrost.exe
+```
 
+## Running main
 
-cd build
-ctest -C Debug --output-on-failure
+### Build the main
+
+In the base directory use
+
+```cmd
+cmake --build build --config Debug
+```
+
+```cmd
+cd build/debug
+```
+
+```cmd
+blockfrost_demo.exe
 ```
 
 ## Project Structure
