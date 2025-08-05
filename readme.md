@@ -162,7 +162,7 @@ The SDK provides comprehensive coverage of the BlockFrost API, including:
 
 ## Demo Video
 
-See blockfrost-cpp-demo.mp4
+https://drive.google.com/file/d/1pTWSB08P3tg86RF-TtWaTt29ikG0xuNE/view?usp=sharing
 
 ## TODO
 
