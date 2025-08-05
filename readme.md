@@ -3,8 +3,9 @@
 
 ## About
 
-The goal of this project is to create a C++ SDK for BlockFrost/Cardano.
-I will use libcpr for HTML requests to blockfrost. I will use nlohmann/json for JSON parsing
+The goal of this project is to create a fully featured SDK for blockfrost written in C++. I wanted to pick a project that would be useful to the open source community around cardano/blockfrost, and rather than create the 100th wallet app I decided to make a C++ SDK. The idea came to me as I scrolled through the long list of available SDK's and saw there was no option for C++ (my prefferred language). As an undergrad student entering my junior year in the fall, I thought this would be a perfect project for my skill level. This taught me a ton about what makes up the cardano ecosystem. I also got to learn about HTML requests, unit testing, CMAKE and JSONs. There are a few tests that are a work in progress, and will be fixed soon, but currently I am out of time. When you run the tests make sure you use a preprod API key as that is what all of my sample data is on at the moment. The current main is a demo that allows you to see exactly what is outputting from each of the API calls. While I don't know how many people will find this useful, I will certainly be using it next year when I compete in this challenge, and perhaps others will find it useful if they wish to create a cardano app with C++.
+
+In the coming weeks I will finish out all the tests, as well as make this project FetchContent() freindly so that other C++ devs can use it in their projects.
 
 ### Dependencies
 
@@ -12,6 +13,8 @@ I will use libcpr for HTML requests to blockfrost. I will use nlohmann/json for 
   - GitHub: https://github.com/libcpr/cpr
 - **nlohmann/json**: JSON parsing and manipulation
   - GitHub: https://github.com/nlohmann/json
+- **gtest**: C++ test framework by Google
+  - GitHub: https://github.com/google/googletest
 
 ## Building the Project
 
@@ -25,26 +28,31 @@ This project is built with MSVC (Microsoft Visual Studio Compiler). Follow these
 ### Build Steps
 
 1. **Open the Developer Command Prompt**
+
    ```cmd
    "x64 Native Tools Command Prompt for VS 2022"
    ```
 
 2. **Navigate to your project directory**
+
    ```cmd
    cd C:\Path\To\YourProject
    ```
 
 3. **Clean previous build (optional)**
+
    ```cmd
    rd /s /q build
    ```
 
 4. **Configure CMake to generate MSVC project files**
+
    ```cmd
    cmake -S . -B build -G "Visual Studio 17 2022" -A x64
    ```
 
 5. **Build the main project and all tests**
+
    ```cmd
    cmake --build build --config Debug --target run_all_tests
    ```
@@ -52,6 +60,7 @@ This project is built with MSVC (Microsoft Visual Studio Compiler). Follow these
 ## Running Tests
 
 ### Method 1: Direct Execution
+
 ```cmd
 cd build/bin/tests/Debug
 test_blockfrost.exe
@@ -135,6 +144,10 @@ The SDK provides comprehensive coverage of the BlockFrost API, including:
 ## TODO
 
 Implement utilities tests
+Fix tests for governance metadata (there seems to be metadata for my drep on cadanoscan.io but blockfrost returns a 404)
+Fix mempool transaction test (needs different tx data?)
+Fix ReturnPoolVotes test
+Fix ReturnScriptDatum tests
 
 ## License
 
