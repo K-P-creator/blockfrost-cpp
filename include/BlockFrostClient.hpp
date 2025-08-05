@@ -59,7 +59,7 @@ class BlockFrostClient {
 	// count - integer - min:1 max:100 default:100 - The number of results displayed on one page.
 	// page - integer min:1 max:21474836 default:1 - The page number for listing the results.
 	// order - string enum - default:asc - The ordering of items from the point of view of the blockchain, not the page listing itself. By default, we return oldest first, newest last
-	json accout_history(const std::string& stakeAdr, int count = 100, int page = 1, const std::string order = "asc");
+	json account_history(const std::string& stakeAdr, int count = 100, int page = 1, const std::string order = "asc");
 
     // Obtain information about the delegation of a specific account
 	// Parameters: Stake address as a string (Path Parameter)
@@ -140,7 +140,7 @@ class BlockFrostClient {
 	// UTXOs of the address
 	// Parameters: Bech32 address - string
 	// asset - Concatenation of the policy_id and hex-encoded asset_name - string
-	json address_uxtos_asset(const std::string& address, const std::string& asset);
+	json address_utxos_asset(const std::string& address, const std::string& asset);
 
 	// Transactions on the address
 	// Parameters: Bech32 address - string

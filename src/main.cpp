@@ -3,7 +3,7 @@
 
 
 int main() {
-    const std::string API_KEY = "YOUR_API_KEY";
+    const std::string API_KEY = "YOUR_API_KEY_HERE";
     const std::string STAKE_ADDR = "stake_test1uq52yy35l6p8qqadg9z2f5wmh84xfkv9kq06udgeg2y6etcd2r2ky";
     const std::string BECH32_ADDR = "addr_test1qrwk4wpsfrnjc6220argh9emc8y6wkdygjvl0q9rcz59ev3g5gfrfl5zwqp66s2y5ngahw02vnvctvql4c63js5f4jhsqqku95";
     const std::string ASSET = "e2bab64ca481afc5a695b7db22fd0a7df4bf930158dfa652fb33799953554d4d495441574152445344656669";
@@ -74,7 +74,7 @@ int main() {
     catch (const std::exception& e) {
         std::cerr << e.what() << '\n';
         ++failure_count;
-    }    try { std::cout << client.accout_history(STAKE_ADDR, 1).dump(2) << "\n";++success_count;
+    }    try { std::cout << client.account_history(STAKE_ADDR, 1).dump(2) << "\n";++success_count;
     }
     catch (const std::exception& e) {
         std::cerr << e.what() << '\n';
@@ -146,7 +146,7 @@ int main() {
 		std::cerr << "\naddress_utxos failed\n";
         std::cerr << e.what() << '\n';
         ++failure_count;
-    }    try { std::cout << client.address_uxtos_asset(BECH32_ADDR, ASSET).dump(2) << "\n";++success_count;
+    }    try { std::cout << client.address_utxos_asset(BECH32_ADDR, ASSET).dump(2) << "\n";++success_count;
     }
     catch (const std::exception& e) {
 		std::cerr << "\naddress_uxtos_asset failed\n";

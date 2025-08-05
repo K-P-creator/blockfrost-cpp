@@ -31,7 +31,7 @@ json BlockFrostClient::account_rewards(const std::string& stakeAdr, int count, i
 	return json::parse(response.text);
 }
 
-json BlockFrostClient::accout_history(const std::string& stakeAdr, int count, int page, const std::string order)
+json BlockFrostClient::account_history(const std::string& stakeAdr, int count, int page, const std::string order)
 {
 	// Validate parameters
 	validate_parameters(count, page, order);

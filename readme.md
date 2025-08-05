@@ -132,6 +132,10 @@ The SDK provides comprehensive coverage of the BlockFrost API, including:
 - **Transactions**: Transaction details and UTXOs
 - **Utilities**: Address derivation and transaction evaluation
 
+## TODO
+
+Implement utilities tests
+
 ## License
 
 This project is open source. Please check the license file for more details.

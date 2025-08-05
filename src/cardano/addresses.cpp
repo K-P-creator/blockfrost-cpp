@@ -42,7 +42,7 @@ json BlockFrostClient::address_utxos(const std::string& address) {
 	return json::parse(response.text);
 }
 
-json BlockFrostClient::address_uxtos_asset(const std::string& address, const std::string& asset) {
+json BlockFrostClient::address_utxos_asset(const std::string& address, const std::string& asset) {
 	auto response = cpr::Get(
 		cpr::Url{ m_baseUrl + "/addresses/" + address + "/utxos/" + asset },
 		cpr::Header{ {"project_id", m_apiKey} }
